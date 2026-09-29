@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>정부·공공 안내서비스 종합 포털 | 스마트 민원 및 지원 안내</title>
+  <meta name="description" content="카테고리별 공공 안내서비스 및 문의기관 정보, 카드뉴스를 한눈에 확인하세요.">
+  <!-- Pretendard Font -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 헤더 영역 -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand">
+        <div class="brand-icon">
+          <i class="fa-solid fa-landmark"></i>
+        </div>
+        <div class="brand-text">
+          <h1>공공 안내서비스 포털</h1>
+          <p class="subtitle">대한민국 주요 공공서비스 및 민원안내 통합 안내 센터</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <div class="status-badge">
+          <span class="pulse-dot"></span> 실시간 안내 서비스 가동 중
+        </div>
+        <button id="themeToggle" class="theme-btn" aria-label="테마 변경">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <!-- 1. 상단 카드뉴스 이미지 영역 (요구조건: 1-4.png <img> 태그로 직접 임베드, 4장 모두 노출) -->
+    <section class="cardnews-section">
+      <div class="section-title-wrap">
+        <div class="badge-title"><i class="fa-solid fa-newspaper"></i> 주요 소식 & 매뉴얼</div>
+        <h2>카드뉴스로 보는 안내서비스</h2>
+        <p>시민 여러분이 자주 찾는 주요 행정 및 복지 서비스 핵심 안내 카드뉴스입니다.</p>
+      </div>
+
+      <div class="cardnews-grid">
+        <div class="cardnews-item" onclick="openImageModal('이미지/카드뉴스1.png', '카드뉴스 1: 주요 서비스 안내')">
+          <div class="cardnews-img-wrap">
+            <img src="이미지/카드뉴스1.png" alt="카드뉴스 1" loading="lazy" onerror="this.src='이미지/%EC%B9%B4%EB%93%9C%EB%89%B4%EC%8A%A41.png'">
+            <div class="img-overlay">
+              <span class="zoom-btn"><i class="fa-solid fa-magnifying-glass-plus"></i> 크게보기</span>
+            </div>
+          </div>
+          <div class="cardnews-caption">
+            <span class="cardnews-num">NEWS 01</span>
+            <span class="cardnews-txt">정부 안내서비스 핵심 매뉴얼</span>
+          </div>
+        </div>
+
+        <div class="cardnews-item" onclick="openImageModal('이미지/카드뉴스2.png', '카드뉴스 2: 복지 및 혜택 안내')">
+          <div class="cardnews-img-wrap">
+            <img src="이미지/카드뉴스2.png" alt="카드뉴스 2" loading="lazy" onerror="this.src='이미지/%EC%B9%B4%EB%93%9C%EB%89%B4%EC%8A%A42.png'">
+            <div class="img-overlay">
+              <span class="zoom-btn"><i class="fa-solid fa-magnifying-glass-plus"></i> 크게보기</span>
+            </div>
+          </div>
+          <div class="cardnews-caption">
+            <span class="cardnews-num">NEWS 02</span>
+            <span class="cardnews-txt">복지·급여 맞춤형 지원 안내</span>
+          </div>
+        </div>
+
+        <div class="cardnews-item" onclick="openImageModal('이미지/카드뉴스3.png', '카드뉴스 3: 온라인 민원 신청 가이드')">
+          <div class="cardnews-img-wrap">
+            <img src="이미지/카드뉴스3.png" alt="카드뉴스 3" loading="lazy" onerror="this.src='이미지/%EC%B9%B4%EB%93%9C%EB%89%B4%EC%8A%A43.png'">
+            <div class="img-overlay">
+              <span class="zoom-btn"><i class="fa-solid fa-magnifying-glass-plus"></i> 크게보기</span>
+            </div>
+          </div>
+          <div class="cardnews-caption">
+            <span class="cardnews-num">NEWS 03</span>
+            <span class="cardnews-txt">비대면 온라인 민원 신청 가이드</span>
+          </div>
+        </div>
+
+        <div class="cardnews-item" onclick="openImageModal('이미지/카드뉴스4.png', '카드뉴스 4: 주요 콜센터 및 연락처')">
+          <div class="cardnews-img-wrap">
+            <img src="이미지/카드뉴스4.png" alt="카드뉴스 4" loading="lazy" onerror="this.src='이미지/%EC%B9%B4%EB%93%9C%EB%89%B4%EC%8A%A44.png'">
+            <div class="img-overlay">
+              <span class="zoom-btn"><i class="fa-solid fa-magnifying-glass-plus"></i> 크게보기</span>
+            </div>
+          </div>
+          <div class="cardnews-caption">
+            <span class="cardnews-num">NEWS 04</span>
+            <span class="cardnews-txt">분야별 주요 문의기관 및 콜센터</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. 필터링 & 검색 컨트롤 바 (요구조건: 카테고리 또는 문의기관 필터링 + '결과N건' 표시) -->
+    <section class="search-filter-section">
+      <div class="filter-header">
+        <div class="filter-headline">
+          <i class="fa-solid fa-filter"></i>
+          <h3>서비스 탐색 및 필터</h3>
+        </div>
+        <!-- 요구조건: '결과N건' 표시 -->
+        <div class="result-counter-badge" id="resultCountBadge">
+          결과 <span id="resultCount" class="highlight-count">0</span>건
+        </div>
+      </div>
+
+      <div class="filter-controls-grid">
+        <!-- 카테고리 필터 -->
+        <div class="control-group">
+          <label for="categoryFilter"><i class="fa-solid fa-layer-group"></i> 카테고리</label>
+          <select id="categoryFilter" class="filter-select">
+            <option value="ALL">전체 카테고리 (7개)</option>
+            <!-- 동적 혹은 기본 옵션 -->
+          </select>
+        </div>
+
+        <!-- 문의기관 필터 -->
+        <div class="control-group">
+          <label for="agencyFilter"><i class="fa-solid fa-building-columns"></i> 문의기관</label>
+          <select id="agencyFilter" class="filter-select">
+            <option value="ALL">전체 문의기관 (전체)</option>
+            <!-- 동적 옵션 -->
+          </select>
+        </div>
+
+        <!-- 검색창 -->
+        <div class="control-group search-group">
+          <label for="searchInput"><i class="fa-solid fa-magnifying-glass"></i> 서비스명 / 콜센터 검색</label>
+          <div class="search-input-wrap">
+            <input type="text" id="searchInput" placeholder="예: 주민등록, 1374, 교통..." autocomplete="off">
+            <button id="clearSearchBtn" class="clear-btn" title="검색어 지우기"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+        </div>
+
+        <!-- 온라인 안내 여부 필터 -->
+        <div class="control-group">
+          <label for="onlineFilter"><i class="fa-solid fa-globe"></i> 온라인 안내</label>
+          <select id="onlineFilter" class="filter-select">
+            <option value="ALL">전체 (가능 / 불가)</option>
+            <option value="가능">온라인안내 가능</option>
+            <option value="불가">온라인안내 불가</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- 빠른 카테고리 칩 필터 -->
+      <div class="quick-chips-wrapper">
+        <span class="chips-label"><i class="fa-solid fa-bolt"></i> 빠른 선택:</span>
+        <div class="quick-chips" id="quickCategoryChips">
+          <!-- JS에서 동적으로 버튼 칩 생성 -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. 카테고리별 요약 카드 영역 (요구조건: 카테고리명, 건수, 대표 문의기관 필수) -->
+    <section class="category-cards-section">
+      <div class="section-title-wrap between">
+        <div>
+          <div class="badge-title"><i class="fa-solid fa-grid-2"></i> 카테고리별 현황</div>
+          <h2>분야별 안내서비스 카드</h2>
+          <p>각 카테고리별 총 서비스 건수와 최다 연계된 대표 문의기관 정보입니다.</p>
+        </div>
+        <div class="view-mode-toggle">
+          <button class="view-btn active" id="btnViewCards" title="카드 뷰"><i class="fa-solid fa-border-all"></i> 카테고리 카드</button>
+          <button class="view-btn" id="btnViewList" title="상세 서비스 리스트 뷰"><i class="fa-solid fa-list-check"></i> 전체 서비스 목록</button>
+        </div>
+      </div>
+
+      <!-- 카테고리 카드 그리드 (카테고리명, 건수, 대표 문의기관 표시) -->
+      <div class="category-grid" id="categoryCardsContainer">
+        <!-- JS로 동적 생성 -->
+      </div>
+    </section>
+
+    <!-- 4. 상세 안내서비스 목록 (필터 결과에 따라 동적으로 반응) -->
+    <section class="services-list-section" id="servicesListSection">
+      <div class="section-title-wrap between">
+        <div>
+          <div class="badge-title"><i class="fa-solid fa-list"></i> 서비스 상세 목록</div>
+          <h2>안내서비스 상세 내역 (<span id="tableResultCount">0</span>건)</h2>
+        </div>
+        <div class="actions">
+          <button class="export-btn" id="btnResetFilter"><i class="fa-solid fa-rotate-left"></i> 필터 초기화</button>
+        </div>
+      </div>
+
+      <div class="table-responsive">
+        <table class="services-table">
+          <thead>
+            <tr>
+              <th>서비스ID</th>
+              <th>서비스명</th>
+              <th>카테고리</th>
+              <th>소관기관</th>
+              <th>문의기관</th>
+              <th>콜센터</th>
+              <th>온라인안내</th>
+              <th>바로연결</th>
+            </tr>
+          </thead>
+          <tbody id="servicesTableBody">
+            <!-- JS 동적 생성 -->
+          </tbody>
+        </table>
+      </div>
+
+      <div class="empty-state" id="emptyState" style="display: none;">
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <h3>조건에 맞는 안내서비스가 없습니다.</h3>
+        <p>필터 조건을 변경하거나 검색어를 다시 확인해주세요.</p>
+        <button class="primary-btn" onclick="resetAllFilters()">전체 목록 보기</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- 이미지 크게보기 모달 -->
+  <div class="modal-backdrop" id="imageModal" onclick="closeImageModal(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <h3 id="modalTitle">카드뉴스 확대보기</h3>
+        <button class="close-modal" onclick="closeImageModal()"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="modal-body">
+        <img id="modalImg" src="" alt="확대 이미지">
+      </div>
+    </div>
+  </div>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-info">
+        <p class="footer-logo"><i class="fa-solid fa-landmark"></i> 공공 안내서비스 통합 포털</p>
+        <p class="footer-desc">정부 및 지자체, 공공기관의 다양한 안내 매뉴얼 및 연락처 서비스를 효율적으로 제공합니다.</p>
+      </div>
+      <div class="footer-meta">
+        <p>데이터 기준일: 2026.09 | 정적 웹 호스팅 서비스 Vercel 배포 완료</p>
+        <p class="copyright">© 2026 Public Service Information Portal. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
